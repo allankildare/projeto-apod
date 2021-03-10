@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/ea399319a5.js" crossorigin="anonymous"></script>
+
     <script src="./script.js" type="text/javascript" defer></script>
     <link rel="stylesheet" href="./style.css">
     <title>Foto do dia NASA</title>
 </head>
 <body>
     <header>
-        <p>Pesquise a foto de um dia específico</p>
-        <div>
-            <input type="date" id="data">
-            <button id="botao">Pesquisar</button>
+        <div class="logo">
+            <img src="./nasa-logo.png" alt="Logotipo da NASA">
+            <h1>APOD</h1>
+        </div>
+        <div class="busca">
+            <div>
+                <input type="date" id="data" title="Pesquise um dia específico">
+                <button id="botao" title="Pesquisar"><i class="fas fa-search"></i></button>
+            </div>
+            <p>Pesquise a foto de um dia específico</p>
         </div>
     </header>
     <div class="container">

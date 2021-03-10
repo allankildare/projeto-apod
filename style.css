@@ -1,3 +1,6 @@
+:root {
+    --nasa-blue: #0B3D91;
+}
 * {
     padding: 0;
     margin: 0;
@@ -5,57 +8,93 @@
 
     font-family: 'Montserrat', sans-serif;
 }
+
+.container {
+    background: linear-gradient(128deg, rgba(97,92,240,0.8323704481792717) 0%, rgba(207,99,153,1) 100%);
+    min-height: 90vh;
+    max-height: max-content;
+}
+
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(39, 39, 39);
+    height: 10vh;
+    padding: 0 100px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+height: 50px;
+}
+
+.logo h1 {
+    font-family: 'Bungee', cursive;
+    color: #eee;
+}
+header .busca {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: rgb(63, 63, 63);
-    height:60px;
 }
-
-header p {
-    color: white;
+header .busca p {
+    color: #bebebe;
     font-weight: 500;
-    margin-bottom: 3px;
+    font-size: 11px;
+    font-style: italic;
+    margin-top: 3px;
+}
+header .busca > div {
+    display: flex;
 }
 
-header input, header button{
-    height: 30px;
+header .busca input, header .busca button {
+    height: 35px;
     border: none;
-    border-radius: 5px;
     font-weight: 600;
     text-align: center;
     outline: none;
 }
 
-header input {
-    margin-right: 5px;
+header .busca input {
+    border-radius: 5px 0 0 5px;
 }
 
-header input:focus {
-    border-bottom: 2px solid rgb(35, 127, 231);
-}
-
-header button {
+header .busca button {
+    background-color: #1861e0;
+    border-radius: 0 5px 5px 0;
     padding: 0 15px;
-    background-color: rgb(230, 230, 230);
+    cursor: pointer;
+    transition: .3s ease background-color;
 }
 
-header button:hover {
-    transition: .3s; 
-    background-color: rgb(204, 204, 204);
+header .busca button:hover {
+    background-color: var(--nasa-blue);
 }
 
-h1 {
-    font-size: 22px;
-    margin: 5px 0 2px 0;
+header .busca input:focus {
+    border-bottom: 2px solid rgb(35, 127, 231);
+    filter: brightness(100%);
 }
 
-h2 {
+.container h1 {
+    font-size: 24px;
+    margin: 15px 0 5px 0;
+    color: #fafafa;
+    text-shadow: 2px 2px 5px rgba(0,0,0,.6);
+}
+
+.container h2 {
     font-size: 16px;
     font-weight: 600;
-    margin-bottom: 5px;
+    color: #fafafa;
+    margin-bottom: 10px;
+    text-shadow: 1px 2px 3px rgba(0,0,0,.6);
 }
 
 .container {

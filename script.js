@@ -4,7 +4,6 @@ let key = 'laQUTbkbRZHvE99chEF5U8VBcDOnqgHcBH2zlnDI'
 
 let container = document.getElementById("imagem-apod")
 
-
 let req = new XMLHttpRequest()
 
 // carregando foto de hoje da APOD 
@@ -12,7 +11,6 @@ req.open('GET', `https://api.nasa.gov/planetary/apod?api_key=${key}`, false)
 req.addEventListener("load", function () {
     if ( this.status === 200 && this.readyState === 4) {
         let dados = JSON.parse(req.responseText)
-        console.log(dados)
         let img = dados.url
 
         container.innerHTML += `<img src="${img}" class="img-apod" id="imagem">`
