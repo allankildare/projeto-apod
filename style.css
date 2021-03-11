@@ -1,5 +1,8 @@
 :root {
     --nasa-blue: #0B3D91;
+    --gray: rgb(39, 39, 39);
+    --heart-color: rgb(190, 27, 27);
+    --white: #fafafa;
 }
 * {
     padding: 0;
@@ -11,7 +14,7 @@
 
 .container {
     background: linear-gradient(128deg, rgba(97,92,240,0.8323704481792717) 0%, rgba(207,99,153,1) 100%);
-    min-height: 90vh;
+    min-height: 84vh;
     max-height: max-content;
 }
 
@@ -19,7 +22,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(39, 39, 39);
+    background-color: var(--gray);
     height: 10vh;
     padding: 0 100px;
 }
@@ -30,7 +33,7 @@ header .logo {
 }
 
 header .logo img {
-height: 50px;
+    height: 50px;
 }
 
 .logo h1 {
@@ -102,6 +105,30 @@ header .busca input:focus {
     display: flex;
     flex-direction: column;
 }
+
 .img-apod {
     width: 650px;
+}
+
+footer {
+    background-color: var(--gray);
+    height: 6vh;
+    color: #fafafa;
+    display: grid;
+    place-items: center;
+}
+
+footer a, footer a:visited {
+    color: var(--white);
+    text-decoration: none;
+    transition: .3s color;
+}
+
+footer a:hover {
+    color: #b3b3b3;
+    text-decoration: underline;
+}
+
+.fa-heart {
+    color: var(--heart-color);
 }
